@@ -1,0 +1,13 @@
+@media (max-width: 400px) {
+    .container{
+        width: 350px;
+    }
+    .frm form input {
+        width:100px;
+        margin-bottom: 8px;
+        margin-left: 5px;
+    }
+    .frm form input:focus{
+        width: 70%;
+    }
+}

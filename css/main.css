@@ -1,0 +1,212 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Alexandria', sans-serif;
+    transition: .3s;
+}
+@font-face {
+    font-family:'clash-royal';
+    src: url("../Clash-Royale-Font/You\ Blockhead.ttf");
+}
+:root{
+    --bodyColor: #eef1f6;
+    --fontColor: #A5DBDD;
+    --borderColor: #407c87;
+    --lineColor : #d3e1e2;
+}
+body{
+    background-color: var(--bodyColor);
+}
+.header{
+    margin-bottom: 10px;
+}
+.container {
+    width:900px;
+    margin: 0px auto;
+    padding: 15px;
+}
+.flipp{
+    transform: rotatey(-180deg)  translate(-100%);
+}
+.chossen {
+    outline: 3px solid var(--fontColor);
+}
+
+.header .container{
+    position: relative;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+}
+.header .container img{
+    height: 90px;
+    margin-right: 20px;
+}
+.header .container::after{
+    content: '';
+    height: 1px;
+    background-color: var(--lineColor);
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+/* -----------------------------------Form-------------------------------------- */
+.frm{
+    margin-bottom: 15px;
+}
+.frm form {
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 10px;
+    position: relative;
+    flex-wrap: wrap;
+    box-shadow: 5px 4px 6px var(--lineColor);
+    justify-content: center;
+}
+.frm form div{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: center;
+}
+.frm form input {
+    width:300px;
+    border: 1px var(--borderColor) solid;
+    height: 30px;
+    position: relative;
+    margin-bottom: 12px;
+    margin-left: 18px;
+    border-radius: 5px;
+}
+.frm form input:focus{
+    outline: transparent;
+    border: 1px solid var(--fontColor);
+    width: 70%;
+}
+.frm form input::placeholder{
+    color: var(--borderColor); 
+    font-size: 12px;   
+}
+.frm form .bottom {
+    width: 80px;
+    padding: 10px;
+    background-color: var(--fontColor);
+    color: white;
+    font-weight: 500;
+    box-shadow: 3px 2px 2px grey;
+    cursor: pointer;
+    
+}
+/* --------------------------------------terka---------------------------------------------- */
+.terka{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom:1px solid var(--lineColor);
+    margin-bottom: 20px;
+}
+.terka>div{
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'clash-royal';
+}
+.fLeader{
+    position: relative;
+    width: calc((100% - 16px)/2) !important;
+    /* border-left: 1px solid var(--lineColor); */
+}
+.fLeader div , .sLeader div{
+    font-weight: 400;
+    margin-bottom: 10px;
+    position: relative;
+}
+.fLeader div::after , .sLeader div::after{
+    content:'';
+    width: 70%;
+    height: 1px;
+    background-color: var(--lineColor);
+    position: absolute;
+    bottom: 0px;
+    left: 28px;
+}
+.fLeader::before{
+    content: '';
+    background-color: var(--lineColor);
+    width: 1px;
+    height: calc(100% - 10px);
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    transform: translate(-50% ,-50%);
+}
+.sLeader{
+    width: calc((100% - 16px)/2) !important;
+}
+/* ----------------------------CARDS-------------------------------------------- */
+.cards{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding: 10px;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+.cards .card{
+    position: relative;
+    width: 160px;
+    height: 240px;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    perspective: 600px;
+    transform-origin: left center;
+    transition: .3s ease-in;
+    margin-bottom: 10px;
+}
+.cards .card .backGround{
+    background-image: url("../images/clash\ royal\ back.jpg");
+    background-size: cover;
+    backface-visibility: hidden;
+    background-position: center;
+    width:100%;
+    height:100%;
+    border-radius:inherit;
+    position: absolute;
+}
+.cards .card .front{
+    font-family: 'clash-royal';
+    position: absolute;
+    /* background-color: brown;     */
+    border-radius:inherit;
+    height:100%;
+    width: 100%;
+    transform: rotateY(180deg);
+    text-align: center;
+    display: flex;
+    direction: ltr;
+    /* align-items: flex-end; */
+}
+.card .front img{
+    width: 100%;
+    height: 100%;
+}
+.card .front span{
+    font-family: inherit;
+    position: absolute;
+    top: 26px;
+    color: white;
+    left: 14px;
+    font-size: 23px;
+}
+.card .front p {
+    direction: ltr;
+    font-family: 'Alexandria', sans-serif;
+    font-family: 'clash-royal','Alexandria', sans-serif;
+    position: absolute;
+    bottom: 40px;
+    left: 21px;
+    word-wrap: break-word;
+    width: 70%;
+}
